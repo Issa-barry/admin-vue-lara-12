@@ -6,6 +6,8 @@ import users from '@/routes/users'               // ✅ helper users
 import { type BreadcrumbItem } from '@/types'
 import PlaceholderPattern from '../components/PlaceholderPattern.vue'
 
+import Button from 'primevue/button'
+
 const breadcrumbs: BreadcrumbItem[] = [
   { title: 'Dashboard', href: dashboard().url },
 ]
@@ -20,7 +22,9 @@ const breadcrumbs: BreadcrumbItem[] = [
         <!-- tes cartes existantes -->
         <div class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
           <PlaceholderPattern />
-          test
+          <div class="absolute inset-0 flex items-center justify-center">
+            <Button label="PrimeVue OK" icon="pi pi-check" />
+          </div>
         </div>
         <div class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border">
           <PlaceholderPattern />
