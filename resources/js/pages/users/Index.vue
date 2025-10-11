@@ -10,6 +10,7 @@ import Tag from 'primevue/tag'
 import Avatar from 'primevue/avatar'
 import Menu from 'primevue/menu'
 import { ref } from 'vue'
+import { Link } from '@inertiajs/vue3'
 
 import IconField from 'primevue/iconfield'
 import InputIcon from 'primevue/inputicon'
@@ -91,7 +92,9 @@ const onSearch = (val: string | undefined) => {
   <!-- Actions à droite -->
   <div class="flex items-center gap-2">
     <Button label="Display" icon="pi pi-sliders-h" outlined />
-    <Button label="New customer" icon="pi pi-plus" />
+     <Link :href="users.create().url">
+    <Button label="Nouveau" icon="pi pi-plus" />
+  </Link>
   </div>
 </div>
 
