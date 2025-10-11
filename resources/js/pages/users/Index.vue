@@ -22,6 +22,7 @@ const breadcrumbs: BreadcrumbItem[] = [
   <!-- ✅ Utilise le layout du dashboard -->
   <AppLayout :breadcrumbs="breadcrumbs">
     <!-- 👇 ton tableau existant ici -->
+  <div class="p-4 md:p-6 lg:p-8">
     <div class="rounded-2xl border border-gray-200 bg-white/60 backdrop-blur p-4 md:p-5">
       <h2 class="mb-4 text-lg font-semibold">Users</h2>
 
@@ -48,9 +49,9 @@ const breadcrumbs: BreadcrumbItem[] = [
               </td>
               <td class="px-3 py-3 text-right">
                 <!-- actions -->
-                <button class="rounded-lg border px-2.5 py-1.5 text-xs hover:bg-gray-50">View</button>
-                <button class="rounded-lg border px-2.5 py-1.5 text-xs hover:bg-gray-50">Edit</button>
-                <button class="rounded-lg bg-rose-600 px-2.5 py-1.5 text-xs text-white hover:bg-rose-700">Delete</button>
+                <button class="rounded-lg border px-2.5 py-1.5 mx-2 text-xs hover:bg-gray-50">View</button>
+                <button class="rounded-lg border px-2.5 py-1.5 mx-2 text-xs hover:bg-gray-50">Edit</button>
+                <button class="rounded-lg bg-rose-600 px-2.5 py-1.5 mx-2 text-xs text-white hover:bg-rose-700">Delete</button>
               </td>
             </tr>
             <tr v-if="props.users.data.length === 0">
@@ -67,5 +68,6 @@ const breadcrumbs: BreadcrumbItem[] = [
               v-html="l.label" />
       </nav> -->
     </div>
+  </div>
   </AppLayout>
 </template>
